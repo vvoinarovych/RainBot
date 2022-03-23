@@ -3,7 +3,8 @@ package com.github.telegram_rain_bot.command;
 public enum CommandName {
 
     START("/start"),
-    HELP("/help");
+    HELP("/help"),
+    NO("no command");
 
     private final String commandName;
 
