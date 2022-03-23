@@ -1,1 +1,1 @@
-web: java -jar target/telegram_rain_bot-1.0-SNAPSHOT.jar
+web: java -jar target/telegram_rain_bot-0.0.1-SNAPSHOT.jar
