@@ -4,19 +4,18 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.github.telegram_rain_bot.model.Weather;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-
+@Component
 @Log4j2
 public class OpenWeatherMapClient implements WeatherClient{
 
 
-    @Value("${open_weather.token}")
-    private String appId;
+    private String appId = "22ca47167cd57b2121b0ead498c987cf";
 
     @Override
     public Weather getWeatherByCityName(String city) {

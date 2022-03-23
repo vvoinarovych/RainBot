@@ -1,4 +1,5 @@
 package com.github.telegram_rain_bot.service;
+
 import com.github.telegram_rain_bot.bot.RainBot;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;

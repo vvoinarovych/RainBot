@@ -16,5 +16,12 @@ public class Weather {
     private String cityName;
     private String countryName;
 
-
+    @Override
+    public String toString() {
+        return "Location: " + cityName +
+                "\nTemperature: " + temperature + " C" +
+                "\nPressure: " + pressure + " Pa" +
+                "\nHumidity: " +humidity + " %" +
+                "\nWind speed: " + windSpeed+ " km/hour" + "\n";
+    }
 }

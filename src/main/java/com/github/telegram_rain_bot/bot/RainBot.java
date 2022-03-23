@@ -1,7 +1,9 @@
 package com.github.telegram_rain_bot.bot;
 
 import com.github.telegram_rain_bot.command.CommandContainer;
+import com.github.telegram_rain_bot.service.OpenWeatherMapClient;
 import com.github.telegram_rain_bot.service.SendMessageServiceImpl;
+import com.github.telegram_rain_bot.service.WeatherClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -23,7 +25,7 @@ public class RainBot extends TelegramLongPollingBot {
     private final CommandContainer commandContainer;
 
     public RainBot() {
-        this.commandContainer = new CommandContainer(new SendMessageServiceImpl(this));
+        this.commandContainer = new CommandContainer(new SendMessageServiceImpl(this), new OpenWeatherMapClient());
     }
 
     @Override
